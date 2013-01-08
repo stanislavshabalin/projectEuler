@@ -7,19 +7,15 @@ def main():
 
     LIMIT = 2000000
 
-    print sum( primesList(LIMIT) )
-
-    return True
-
-def primesList(limit):
-    res = []
+    res = 0
     for n in primes():
-        if n >= limit:
+        if n >= LIMIT:
             break
 
-        res.append(n)
+        res += n
 
-    return res
+    print res
+    return True
 
 def primes():
     yield 2
