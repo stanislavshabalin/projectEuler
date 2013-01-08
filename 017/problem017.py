@@ -58,9 +58,9 @@ def numberLen(num):
 
     hundreds = num / 100
     if ( 0 != hundreds ):
-        numLen += wordsLen[hundreds] + 10 # see comment above
-        if 0 == num % 100:
-            return numLen - 3 # no " and"
+        numLen += wordsLen[hundreds] + 7 # plus "hundred", see comment above
+        if num % 100:
+            numLen += 3 # plus " and "
 
     num %= 100
 
